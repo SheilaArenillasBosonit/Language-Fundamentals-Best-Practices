@@ -9,7 +9,9 @@ const myObject ={
 };
 function toLowerCaseKey(obj){
     let key={};
+    //Utilizamos la clave-valor y hacemos un for Each 
     Object.keys(obj).forEach(element=>{
+        //Convertimos cada caracter de la cadena en minusculas 
         keys[element.toLowerCase()]=obj[element];
     });
     return key;

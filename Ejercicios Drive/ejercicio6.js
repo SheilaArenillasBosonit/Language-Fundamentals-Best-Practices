@@ -25,9 +25,9 @@ function roundedResult(num, dec){
     }else {
         numTochange --;
     }
-
+    //Con el metodo substring extremos caracteres, entre dos indices de una cadena y nos devuelve otra
     let finished = numToString.substring(0,index+1);
-
+    //parseFloat analiza un argumento y devuelve un número 
     return parseFloat(finished.replace(finished[finished.lenght-1], numTochange))
 };
 console.log(roundedResult(1.123456789, 6));

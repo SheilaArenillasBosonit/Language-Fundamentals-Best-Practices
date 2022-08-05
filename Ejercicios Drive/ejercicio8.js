@@ -27,13 +27,15 @@ function fromBytesToFormattedSizeUnits(num, par=3){
         24: 'YB'
     };
     let newNum= parseFloat(num.toPrecision(par)).toString().split('0');
+    // pasamos por un filtro 
     let exp = newNum.filter(element=>element==='').length;
     let entirePart = newNum[0];
-
+    //Hacemos un  bucle
     while(entirePart.length>3){
         exp+=3;
         entirePart = entirePart.replace(entirePart.substring(entirePart.length-3, entirePart.length), "")
     }
+    //Retornamos la suma 
     return entirePart+scale[exp]
 }
 
