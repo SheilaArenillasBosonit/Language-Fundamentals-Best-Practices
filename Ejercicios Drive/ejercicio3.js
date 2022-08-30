@@ -11,7 +11,7 @@ const arrCities = [
     //Realizamos un For Each, para ejecutar una función callback
     arr.forEach(obj => {
       //Realizamos un if para decirle que saque todas las que no sean capitales
-        if(obj.capital) console.log(obj.city)
+        if(obj.capital !== true) console.log(obj.city)
         
     });
   }

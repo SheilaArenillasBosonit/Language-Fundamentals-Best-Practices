@@ -3,18 +3,11 @@ Crea una función que a partir de un objeto de entrada, retorne un objeto asegur
 La función debe tener un objeto como único parámetro.
  
 */
-const myObject ={ 
-    name: 'Sheila',
-    addres: 'Home'
-};
-function toLowerCaseKey(obj){
-    let key={};
-    //Utilizamos la clave-valor y hacemos un for Each 
-    Object.keys(obj).forEach(element=>{
-        //Convertimos cada caracter de la cadena en minusculas 
-        keys[element.toLowerCase()]=obj[element];
-    });
-    return key;
-}
-const myObjectLoweCase= toLowerCaseKey(myObject);
-console.log(myObjectLoweCase);
+const lowercase = parametro1 =>
+Object.keys(parametro1).reduce((value, key) => {
+    value[key.toLowerCase()] = parametro1[key];
+    return value;
+}, {});
+
+const Users = { NamE: "Sheila", LAStnaME: 'Arenillas' };
+console.log(lowercase(Users));

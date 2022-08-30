@@ -20,6 +20,6 @@ function returnFalsyValues (obj,typeFunction){
     }
     return temp;
 };
-const result = returnFalsyValues({ a: 1, b: '2', c: 3 }, x => typeof x === 'string')
+const result2 = returnFalsyValues({ a: 1, b: '2', c: 3 }, x => typeof x !== 'string')
  
-console.log(result); // {a: 1, c: 3}
+console.log(result2); // {a: 1, c: 3}
